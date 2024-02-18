@@ -48,12 +48,12 @@ function TableWrapper({ skeletonFiles }: { skeletonFiles: Filetype[] }) {
                 </Button>
 
                 <div className='border rounded-lg'>
-                    <div className='border-b h-12'> 
+                    <div className='border-b h-12'>
                         {skeletonFiles.map((file) => (
                             <div key={file.id} className='flex items-center space-x-4 p-5 w-full'>
                                 <Skeleton className='h-12 w-12 mt-16'></Skeleton>
                                 <Skeleton className='h-12 w-full'></Skeleton>
-                                </div>
+                            </div>
                         ))}
                         {skeletonFiles.length === 0 && (
                             <div className='flex space-x-4 p-5 w-full items-center'>
@@ -69,7 +69,7 @@ function TableWrapper({ skeletonFiles }: { skeletonFiles: Filetype[] }) {
     }
     return (
         <div className='flex flex-col space-y-5 pb-10'>
-            <Button variant={'outline'} className='w-fit ml-auto' 
+            <Button variant={'outline'} className='w-fit ml-auto'
                 onClick={() => {
                     useSort(sort === "desc" ? "asc" : "desc")
                 }}
